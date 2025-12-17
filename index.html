@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Smart Greenhouse Landing</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(135deg, #a8e6cf, #dcedc1, #80cbc4, #b2dfdb);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      @keyframes gradientBG {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Navbar */
+      nav {
+        width: 100%;
+        padding: 15px 30px;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      nav h2 {
+        color: #2e7d32;
+        font-size: 24px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #2e7d32;
+        font-weight: bold;
+        margin-left: 20px;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: #00897b;
+      }
+
+      /* Main Card */
+      .main-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .card {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+      }
+
+      .card img.background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+        filter: brightness(0.6);
+      }
+
+      .card .content {
+        position: relative;
+        z-index: 1;
+        padding: 20px;
+      }
+
+      .card h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+
+      .card p {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        font-size: 16px;
+        color: #ffffff;
+        background: #26a69a;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: background 0.3s, transform 0.3s;
+      }
+
+      .btn:hover {
+        background: #00897b;
+        transform: translateY(-3px);
+      }
+
+      @media (max-width: 500px) {
+        .card {
+          width: 90%;
+          height: 350px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h2>Smart Greenhouse</h2>
+      <div>
+      </div>
+    </nav>
+
+    <div class="main-container">
+      <div class="card">
+        <img
+          class="background"
+          src="https://i.pinimg.com/1200x/e2/63/12/e26312e8f96cc40a6d95ce5052308ce8.jpg"
+          alt="Greenhouse"
+          loading="lazy"
+        />
+        <div class="content">
+          <h1>Welcome to Smart Greenhouse</h1>
+          <p>Click below to enter the Advanced Greenhouse CPS Dashboard</p>
+          <a class="btn" href="./mainPage.html">Enter Dashboard</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
